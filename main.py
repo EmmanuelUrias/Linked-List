@@ -23,9 +23,11 @@ class LinkedList:
             print('The linked list is empty')
         else:
             c_node = self.head
-            while c_node is not None:
-                print(c_node.data)
+            linked_list_string = ''
+            while c_node:
+                linked_list_string += f'{c_node.data} --> '
                 c_node = c_node.reference
+            print(linked_list_string)
 
     def add_to_start(self, data):
         n_node = Node(data)
@@ -36,4 +38,10 @@ class LinkedList:
 linked_list1 = LinkedList()
 linked_list1.add_to_start(83)
 linked_list1.add_to_start(12)
-linked_list1.print_linked_list()
+linked_list1.add_to_start(node1.data)
+# linked_list1.print_linked_list()
+
+linked_list2 = LinkedList(node2)
+linked_list2.add_to_start(25)
+linked_list2.add_to_start(26)
+linked_list2.print_linked_list()
